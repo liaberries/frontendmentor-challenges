@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@300;400;600&display=swap");
+body {
+  background-color: hsl(217deg, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper .preview-card {
+  background-color: hsl(216deg, 50%, 16%);
+  width: 290px;
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.wrapper .preview-card .img-container {
+  position: relative;
+  width: 100%;
+}
+.wrapper .preview-card .img-container .card-img {
+  display: block;
+  width: 100%;
+  width: 250px;
+  padding: 0;
+  padding: 20px;
+  border-radius: 25px;
+  align-self: center;
+}
+.wrapper .preview-card .img-container .card-img:hover {
+  cursor: pointer;
+}
+.wrapper .preview-card .img-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  opacity: 0;
+  transition: 0.3s ease;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(178deg, 100%, 50%, 0.5);
+  border-radius: 10px;
+}
+.wrapper .preview-card .img-container .overlay .image-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.wrapper .preview-card .img-container:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+.wrapper .preview-card .title {
+  color: white;
+  font-weight: 400;
+  padding-left: 25px;
+  padding-top: 0;
+  margin: 0;
+  text-decoration: none;
+}
+.wrapper .preview-card .title:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
+}
+.wrapper .preview-card .description {
+  color: hsl(215deg, 51%, 70%);
+  font-size: 14px;
+  font-weight: 300;
+  width: 250px;
+  padding-left: 25px;
+  padding-bottom: 5px;
+}
+.wrapper .preview-card .info {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+.wrapper .preview-card .info .eth-info {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding-left: 25px;
+}
+.wrapper .preview-card .info .eth-info .eth-icon {
+  width: 10px;
+  height: 15px;
+  padding: 0;
+}
+.wrapper .preview-card .info .eth-info .eth {
+  margin: 0;
+  color: hsl(178deg, 100%, 50%);
+  font-size: 12px;
+}
+.wrapper .preview-card .info .days {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding-right: 15px;
+}
+.wrapper .preview-card .info .days .clock-icon {
+  width: 15px;
+  height: 15px;
+}
+.wrapper .preview-card .info .days .days-left {
+  margin: 0;
+  padding-right: 10px;
+  color: hsl(215deg, 51%, 70%);
+  font-size: 12px;
+}
+.wrapper .preview-card .horizontal-line::after {
+  content: "";
+  width: 230px;
+  display: block;
+  border-bottom: 1px solid hsl(215deg, 32%, 27%);
+  margin-left: 25px;
+}
+.wrapper .preview-card .creator {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-left: 25px;
+  padding-top: 10px;
+  align-items: center;
+}
+.wrapper .preview-card .creator .avatar {
+  height: 25px;
+  border-radius: 20px;
+  border: 1px solid white;
+  margin: 0;
+  padding: 0;
+}
+.wrapper .preview-card .creator .name {
+  font-size: 12px;
+  margin: 0;
+  color: hsl(215deg, 51%, 70%);
+  padding: 0;
+}
+.wrapper .preview-card .creator .name span {
+  color: white;
+}
+.wrapper .preview-card .creator .name span:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
+}
+.wrapper .attribution {
+  text-align: center;
+  width: 300px;
+  font-size: 12px;
+  color: hsl(215deg, 51%, 70%);
+  padding-top: 20px;
+}
+.wrapper .attribution a {
+  color: white;
+  text-decoration: none;
+}
+.wrapper .attribution a:hover {
+  color: hsl(178deg, 100%, 50%);
+}/*# sourceMappingURL=main.css.map */
