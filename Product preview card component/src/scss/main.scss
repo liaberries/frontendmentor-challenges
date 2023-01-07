@@ -108,6 +108,10 @@ body {
                 padding-left: 25px;
                 padding-top: 20px;
 
+                a {
+                    text-decoration: none;
+                }
+
                 button {
                     background-color: $btn;
                     height: 40px;
@@ -125,25 +129,29 @@ body {
                         background-color: $btn-hover;
                     }
 
-                    .cart-icon {
-                        height: 15px;
-                        width: 15px;
-                    }
 
-                    a {
+                    .btn-contents {
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+
+                        color: white;
                         text-decoration: none;
                         font-family: 'Montserrat', sans-serif;
                         font-weight: 600;
-                        font-size: 12px;
-                        color: white;
-                        margin: 0;
-                        padding: 0;
 
-                    }
+                        .cart-icon {
+                            height: 15px;
+                            width: 15px;
+                        }
+                    }           
                 }
             }
         }    
     }
+    
     .attribution {
         text-align: center;
         padding: 10px;

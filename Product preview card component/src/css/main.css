@@ -79,6 +79,9 @@ body {
   padding-left: 25px;
   padding-top: 20px;
 }
+.wrapper .product-card-container .content .btn a {
+  text-decoration: none;
+}
 .wrapper .product-card-container .content .btn button {
   background-color: #3d8168;
   height: 40px;
@@ -95,18 +98,19 @@ body {
 .wrapper .product-card-container .content .btn button:hover {
   background-color: #1a4031;
 }
-.wrapper .product-card-container .content .btn button .cart-icon {
-  height: 15px;
-  width: 15px;
-}
-.wrapper .product-card-container .content .btn button a {
+.wrapper .product-card-container .content .btn button .btn-contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 12px;
-  color: white;
-  margin: 0;
-  padding: 0;
+}
+.wrapper .product-card-container .content .btn button .btn-contents .cart-icon {
+  height: 15px;
+  width: 15px;
 }
 .wrapper .attribution {
   text-align: center;
