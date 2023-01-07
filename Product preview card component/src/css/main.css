@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 550px;
-  height: 410px;
+  height: 400px;
   border-radius: 10px;
 }
 .wrapper .product-card-container .perfume-img {
@@ -76,39 +76,39 @@ body {
 .wrapper .product-card-container .content .btn {
   display: flex;
   flex-direction: row;
-  padding-left: 25px;
-  padding-top: 20px;
-}
-.wrapper .product-card-container .content .btn a {
-  text-decoration: none;
-}
-.wrapper .product-card-container .content .btn button {
-  background-color: #3d8168;
-  height: 40px;
-  width: 215px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
   justify-content: center;
   align-items: center;
+  background-color: #3d8168;
+  color: white;
+  height: 40px;
+  width: 215px;
+  margin-left: 25px;
+  margin-top: 10px;
   border-radius: 6px;
   border: 0;
   cursor: pointer;
+  text-decoration: none;
 }
-.wrapper .product-card-container .content .btn button:hover {
+.wrapper .product-card-container .content .btn:hover {
   background-color: #1a4031;
 }
-.wrapper .product-card-container .content .btn button .btn-contents {
+.wrapper .product-card-container .content .btn .btn-contents {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  color: white;
+  padding: 0;
+  margin: 0;
   text-decoration: none;
+  color: white;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
 }
-.wrapper .product-card-container .content .btn button .btn-contents .cart-icon {
+.wrapper .product-card-container .content .btn .cart-icon {
   height: 15px;
   width: 15px;
 }
@@ -129,7 +129,7 @@ body {
 @media only screen and (max-width: 500px) {
   .wrapper .product-card-container {
     flex-direction: column;
-    width: 350px;
+    width: 340px;
     height: 610px;
   }
   .wrapper .product-card-container .perfume-img {
@@ -156,17 +156,6 @@ body {
     width: 295px;
   }
   .wrapper .product-card-container .content .btn {
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0;
-    padding-top: 10px;
-    padding-left: 25px;
-  }
-  .wrapper .product-card-container .content .btn button {
-    width: 300px;
-    height: 45px;
-    border-radius: 7px;
-    margin: 0;
-    padding: 0;
+    width: 280px;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -35,7 +35,7 @@ body {
         display: flex;
         flex-direction: row;
         width: 550px;
-        height: 410px;
+        height: 400px;
         border-radius: 10px;
 
         .perfume-img {
@@ -105,53 +105,50 @@ body {
             .btn {
                 display: flex;
                 flex-direction: row;
-                padding-left: 25px;
-                padding-top: 20px;
+                justify-content: center;
+                align-items: center;
+                background-color: $btn;
+                color: white;
+                height: 40px;
+                //width: 215px;
+                width: 215px;
+                margin-left: 25px;
+                margin-top: 10px;
+                border-radius: 6px;
+                border: 0;
+                cursor: pointer;
+                text-decoration: none;
+                       
 
-                a {
-                    text-decoration: none;
+                &:hover {
+                    background-color: $btn-hover;
                 }
 
-                button {
-                    background-color: $btn;
-                    height: 40px;
-                    width: 215px;
+                .btn-contents {
                     display: flex;
                     flex-direction: row;
-                    gap: 10px;
                     justify-content: center;
                     align-items: center;
-                    border-radius: 6px;
-                    border: 0;
-                    cursor: pointer;
+                    gap: 10px;
+                    padding: 0;
+                    margin: 0;
+                    text-decoration: none;
+                    color: white;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 600; 
+                    font-size: 14px;
+                    text-decoration: none;
+                    color: white;     
+                }
 
-                    &:hover {
-                        background-color: $btn-hover;
-                    }
-
-
-                    .btn-contents {
-
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 10px;
-
-                        color: white;
-                        text-decoration: none;
-                        font-family: 'Montserrat', sans-serif;
-                        font-weight: 600;
-
-                        .cart-icon {
-                            height: 15px;
-                            width: 15px;
-                        }
-                    }           
+                .cart-icon {
+                    height: 15px;
+                    width: 15px;
                 }
             }
         }    
     }
-    
+
     .attribution {
         text-align: center;
         padding: 10px;
@@ -176,7 +173,7 @@ body {
 
         .product-card-container {
             flex-direction: column;
-            width: 350px;
+            width: 340px;
             height: 610px;
 
             .perfume-img {
@@ -207,19 +204,7 @@ body {
 
 
                 .btn {
-                    justify-content: flex-start;
-                    align-items: center;
-                    margin: 0;
-                    padding-top: 10px;
-                    padding-left: 25px;
-
-                    button {
-                        width: 300px;
-                        height: 45px;
-                        border-radius: 7px;
-                        margin: 0;
-                        padding: 0;
-                    }
+                    width: 280px;
                 }
             }
         }
