@@ -111,6 +111,15 @@ body {
 .wrapper .attribution {
   text-align: center;
   padding: 10px;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+}
+.wrapper .attribution a {
+  color: #3d8168;
+}
+.wrapper .attribution a:hover {
+  color: #1a4031;
 }
 
 @media only screen and (max-width: 500px) {

@@ -149,6 +149,17 @@ body {
     .attribution {
         text-align: center;
         padding: 10px;
+        color: black;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+
+        a {
+            color: $btn;
+
+            &:hover {
+                color: $btn-hover;
+            }
+        }
     }
 }
 
