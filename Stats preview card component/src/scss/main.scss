@@ -24,147 +24,200 @@ body {
     transform: translate(-50%, -50%);
 
     .card-container {
-        width: 58em;
-        height: 23em;
         background-color: $card-bg;
-        display: flex;
-        flex-direction: row;
-        border-top-left-radius: 7px;
-        border-bottom-left-radius: 7px;
+        width: 14.5em;
+        height: 35em;
+        border-radius: 7px;
 
-
-
-        .left {
-            width: 50%;
-
-            .heading {
-                font-family: $heading-paragraph-font;
-                color: white;
-                padding-left: 2.2em;
-                padding-top: 1.5em;
-                font-size: 1.8em;
-                width: 12em;
-            }
-
-
-            .main-paragraph {
-                color:$statheadings;
-                font-family: $heading-paragraph-font;
-                font-size: 12px;
-                padding-left: 5.3em;
-                line-height: 1.7em;
-                width: 25em;
-            }
-
-            span {
-                color:$soft-violet;
-            }
-    
-            .stats-wrapper {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                padding-left: 4.1em;
-                padding-top: 2em;
-                gap: 4.5em;
-                padding-bottom: 0;
-
-                .companies, .templates, .queries{
-                    display: flex;
-                    flex-direction: column;
-                    font-family: $heading-paragraph-font;
-                    font-weight: 700;
-                    font-size: 1.2rem;
-                    color: white;
-                    margin: 0;
-                }
-                .bottom {
-                    display: flex;
-                    flex-direction: row;
-                    gap: 4.2em;
-                    color: $statheadings;
-                    font-family: $stats-font;
-                    font-size: 0.71rem;
-                    text-transform: uppercase;
-                    margin-top: -8.5em;
-                }
-            }
-        }
-
-      
-        .right-header-img {
-            width: 50%;
+        .header-img {
+            width: 100%;
+            height: 10.5em;
             border-top-right-radius: 7px;
-            border-bottom-right-radius: 7px;
+            border-top-left-radius: 7px;
             overflow: hidden;
-            background-image: url(/images/image-header-desktop.jpg);
+            background-image: url(/images/image-header-mobile.jpg);
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size:cover;
 
             .overlay {
                 background-color: $soft-violet;
                 border-top-right-radius: 7px;
-                border-bottom-right-radius: 7px;
-                height: 23em;
+                border-top-left-radius: 7px;
+                height: 10.5em;
                 mix-blend-mode: difference;
                 opacity: .1;
                 position: absolute;
-                width: 29em;
-
+                width: 14.5em;
             }
         }
 
-        .right-header-img::after {
+        .header-img::after {
             background-color: hsl(277, 90%, 31%);
             border-top-right-radius: 7px;
-            border-bottom-right-radius: 7px;
+            border-top-left-radius: 7px;
             content: '';
-            height: 23em;
+            height: 10.5em;
             opacity: .52;
             position: absolute;
-            width: 29em;
+            width: 14.5em;
         }
+
+        .content {
+            padding-left: 1.2em;
+            padding-top: 1.5em;
+            width: 12em;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+
+            .heading {
+                text-align: center;
+                color:white;
+                font-family: $heading-paragraph-font;
+                font-size: 1.2em;
+                margin: 0;
+                padding-bottom: 0.6em;
+
+
+                span {
+                    color: $soft-violet;
+                }
+            }
+
+            .main-paragraph {
+                text-align: center;
+                color:$statheadings;
+                font-family: $heading-paragraph-font;
+                font-size: 0.65rem;
+                width: 18em;
+                line-height: 1.7em;
+                padding-bottom: 1.8em;
+                margin: 0;
+            }
+        }
+
+        .stats-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-top: 0.6em;
+            text-align: center;
+            gap: 0.5em;
+            
+            
+            p {
+                margin: 0.5em;
+                padding: 0;
+            }
+
+            .companies-number, .templates-number, .queries-number {
+                font-family: $heading-paragraph-font;
+                font-size: 1rem;
+                font-weight: 700;
+                color: white;
+                margin-left: 0.3em;
+            }
+
+            .stats-span {
+                font-family:$stats-font;
+                font-size: 0.55rem;
+                text-transform: uppercase;
+                font-weight: 400;
+                color:$statheadings;
+                padding-top: 2em;
+                margin:0;
+                letter-spacing: 0.1em;
+            }
+
+        }
+
+
     }
 }
 
-@media only screen and (max-width: 900px) {
-
-    body {
-      background-color: lightblue;
-    }
+@media only screen and (min-width: 900px) {
 
     .wrapper {
 
         .card-container {
-            display: flex;
-            flex-direction: column;
-            width: 15em;
-            height: 35em;
-            border-radius: 7px;
+            display:flex;
+            flex-direction: row-reverse;
+            width: 55em;
+            height: 23em;
 
-            .left {
-                
-                .heading {
-                    width: 10em;
-                    text-align: center;
-                    font-size: 1.2rem;
-                    padding-left: 1em;
-                    padding-top: 10em;
 
+            .header-img {
+                width: 26em;
+                height: 23em;
+                border-top-left-radius: 0;
+                border-bottom-right-radius: 7px;
+
+                .overlay {
+                    background-color: $soft-violet;
+                    width: 26em;
+                    height: 23em;
+                    mix-blend-mode: difference;
+                    opacity: .1;
+                    position: absolute;
+                    border-top-left-radius: 0;
                 }
             }
 
-            .right-header-img {
-                width: 10%;
-                border-top-right-radius: 7px;
+            .header-img::after {
+                background-color: hsl(277, 90%, 31%);
+                content: '';
+                width: 26em;
+                height: 23em;
+                opacity: .52;
+                position: absolute;
+                border-top-left-radius: 0;
                 border-bottom-right-radius: 7px;
-                overflow: hidden;
-                background-image: url(/images/image-header-desktop.jpg);
-                background-repeat: no-repeat;
-                background-size: cover;
+            }
+
+            .top-left {
+                display: flex;
+                flex-direction: column;
+                width: 25em;
+
+                .content {
+                    padding-top: 3em;
+                    padding: 0;
+                    margin: 0;
+                    
+    
+                    .heading {
+                        font-size: 1.8rem;
+                        width: 12em;
+                        text-align: left;
+                        padding-top: 2em;
+                    }
+
+                    .main-paragraph {
+                        width: 26em;
+                        text-align: left;
+                        padding-left: 0.2em;
+                        padding-top: 0.5em;
+                        font-size: 0.75rem;
+                    }
+    
+                }
+    
+                .stats-wrapper {
+                    display:flex;
+                    flex-direction: row;
+                    gap: 3.5em;
+                    padding-left: -2.5em;
+                    padding-top: 1em;
+
+                    .companies-number {
+                        margin-left: -1em;
+                    }
+
+                    .templates-number {
+                        margin-left: -1em;
+                    }
+                }
             }
         }
     }
-
-    
-  }
+}
