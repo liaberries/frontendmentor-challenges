@@ -103,6 +103,19 @@ body {
   margin: 0;
   letter-spacing: 0.1em;
 }
+.wrapper .attribution {
+  color: white;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+  padding-top: 1em;
+}
+.wrapper .attribution a {
+  color: hsl(277deg, 64%, 61%);
+}
+.wrapper .attribution a:hover {
+  color: hsla(0deg, 0%, 100%, 0.6);
+}
 
 @media only screen and (min-width: 900px) {
   .wrapper .card-container {
