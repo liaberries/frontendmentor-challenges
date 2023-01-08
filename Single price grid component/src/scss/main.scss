@@ -1,0 +1,272 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+// Colors
+$cyan:hsl(179, 62%, 43%);
+$light-cyan: #58cbca;
+$bright-yellow:hsl(71, 73%, 54%);
+$light-gray:hsl(204, 43%, 93%);
+$grayish-blue: hsl(218, 22%, 67%);
+
+
+// Typography
+$body-font: 16px;
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: $light-gray;
+    font-family: 'Karla';
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .card-container {
+        background-color:white;
+        width: 18em;
+        height: 40em;
+        border-radius: 5px;
+
+        .top {
+            height: 14em;
+
+            .heading {
+                color:$cyan;
+                font-size: 1.1rem;
+                padding: 1.5em 1em;
+            }
+
+            .subheading {
+                color:$bright-yellow;
+                font-size: 0.9rem;
+                font-weight: 700;
+                padding: 0 1.3em;
+            }
+
+            .paragraph {
+                color:$grayish-blue;
+                font-size: 0.8rem;
+                padding: 1em 1.5em;
+                line-height: 1.7em;
+                width: 19em;
+            }
+        }  
+
+        .right {
+            background-color: $cyan;
+            height: 10.5em;
+            margin: 0;
+            padding: 0;
+            color:white;
+            padding: 1.5em 1.2em;
+            
+
+            .monthly-subscription {
+                font-size: 1rem;
+                font-weight: 700;
+                padding-bottom: 1em;
+            }
+
+            .price {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1em;
+
+                .dollar {
+                    font-size: 1.8rem;
+                }
+
+                .month {
+                    font-size: 0.9rem;
+                    color:$light-cyan;
+                }
+            }
+
+            .description {
+                font-size: 0.9rem;
+                padding-top: 0.7em;
+
+            }
+
+            .button-container {
+
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding-top: 2em;
+    
+                .button {
+                    width: 15em;
+                    height: 2.5em;
+                    border-radius: 3px;
+                    background-color: $bright-yellow;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $light-cyan;
+                    }
+        
+                    .btn {
+                        text-decoration: none;
+                        color: white;
+                        font-weight: 700;
+                        font-size: 0.9rem;
+        
+                    }
+                }
+            }
+        }
+
+
+        .left {
+            background-color:$light-cyan;
+            height: 12em;
+            margin: 0;
+            padding-bottom: 1em;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+            .heading-left {
+                color:white;
+                padding: 1.5em 1.5em 0 1.5em;
+                font-weight: 700;
+            }
+
+            ul {
+                list-style: none;
+                color:white;
+                font-size: 0.8rem;
+                padding-left: 2em;
+                margin: 0;
+                padding-top: 1em;
+                line-height: 1.5em;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 800px) {
+
+    .wrapper {
+
+        .card-container {
+            width: 40em;
+            height: 30em;
+            display: grid;
+            grid-template-areas: 
+            "header header"
+            "left-section right-section";
+            border-radius: 10px;
+
+            .top {
+                grid-area: header;
+
+                .heading {
+                    font-size: 1.5rem;
+                    padding-left: 1.7em;
+                    padding-bottom: 0.8em;
+
+                }
+
+                .subheading {
+                    font-size: 1.1rem;
+                    padding-left: 2.3em;
+                    padding-top: 0;
+
+                }
+
+                .paragraph {
+                    font-size: 1rem;
+                    width: 33em;
+                    padding-left: 2.6em;
+
+                }
+            }
+    
+            .left {
+                grid-area: right-section;
+                height: 16em;
+                width: 19.6em;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 0;
+
+                .heading-left {
+                    padding: 2.3em 2em 0 2em;
+                    font-size: 1.1rem;
+                }
+
+                ul {
+                    padding-left: 2.6em;
+                    padding-top: 1.5em;
+                    font-size: 0.9rem;
+
+                }
+            }
+    
+            .right {
+                grid-area: left-section;
+                height: 14em;
+                width: 18em;
+                border-bottom-left-radius: 10px;
+
+                .monthly-subscription {
+                    font-size: 1.1rem;
+                    padding: 1em;
+                }
+    
+                .price {
+                    padding: 0.1em 0 0 1em;
+    
+                    .dollar {
+                        font-size: 2.3rem;
+                    }
+    
+                    .month {
+                        font-size: 0.9rem;
+                    }
+                }
+    
+                .description {
+                    font-size: 1rem;
+                    padding: 0.3em 0 0 1em;
+                }
+
+
+                .button-container {
+
+                    .button {
+                        width: 14em;
+                        height: 3em;
+
+                        .btn {
+                            font-size: 1rem;
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+        
+    }
+
+}
+
+
