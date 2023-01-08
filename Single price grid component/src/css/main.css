@@ -122,6 +122,16 @@ body {
   padding-top: 1em;
   line-height: 1.5em;
 }
+.wrapper footer {
+  padding-top: 0.7em;
+  color: gray;
+}
+.wrapper footer a {
+  color: hsl(179deg, 62%, 43%);
+}
+.wrapper footer a:hover {
+  color: hsl(71deg, 73%, 54%);
+}
 
 @media only screen and (min-width: 800px) {
   .wrapper .card-container {
@@ -194,5 +204,8 @@ body {
   }
   .wrapper .card-container .right .button-container .button .btn {
     font-size: 1rem;
+  }
+  .wrapper footer {
+    padding-top: 2em;
   }
 }/*# sourceMappingURL=main.css.map */
