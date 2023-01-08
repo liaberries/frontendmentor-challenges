@@ -82,7 +82,7 @@ body {
 .wrapper .card-container .right .button-container .button {
   width: 15em;
   height: 2.5em;
-  border-radius: 3px;
+  border-radius: 6px;
   background-color: hsl(71deg, 73%, 54%);
   display: flex;
   flex-direction: row;
@@ -110,8 +110,9 @@ body {
 }
 .wrapper .card-container .left .heading-left {
   color: white;
-  padding: 1.5em 1.5em 0 1.5em;
+  padding: 1em 1.5em 0 1.5em;
   font-weight: 700;
+  font-size: 1rem;
 }
 .wrapper .card-container .left ul {
   list-style: none;
@@ -187,6 +188,7 @@ body {
   }
   .wrapper .card-container .right .price {
     padding: 0.1em 0 0 1em;
+    font-weight: 700;
   }
   .wrapper .card-container .right .price .dollar {
     font-size: 2.3rem;

@@ -109,7 +109,7 @@ body {
                 .button {
                     width: 15em;
                     height: 2.5em;
-                    border-radius: 3px;
+                    border-radius: 6px;
                     background-color: $bright-yellow;
                     display: flex;
                     flex-direction: row;
@@ -144,8 +144,9 @@ body {
 
             .heading-left {
                 color:white;
-                padding: 1.5em 1.5em 0 1.5em;
+                padding: 1em 1.5em 0 1.5em;
                 font-weight: 700;
+                font-size: 1rem;
             }
 
             ul {
@@ -246,6 +247,7 @@ body {
     
                 .price {
                     padding: 0.1em 0 0 1em;
+                    font-weight: 700;
     
                     .dollar {
                         font-size: 2.3rem;
