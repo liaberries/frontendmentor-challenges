@@ -1,0 +1,244 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+
+// Colors
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+$very-pale-blue:hsl(225, 100%, 98%);
+$desaturated-blue:  hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+// Typography
+$body-font-size: 16px;
+$body-font: 'Red Hat Display', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $pale-blue;
+    font-family: $body-font;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .card-container {
+        background-color: white;
+        width: 19em;
+        height: 31.5em;
+        border-radius: 15px;
+
+        .hero {
+            width: 100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+
+            .heading {
+                font-size: 1.25rem;
+                color: $dark-blue;
+                padding-top: 1em;
+                font-weight: 900;
+            }
+
+            .paragraph {
+                font-size: 0.9rem;
+                color: $desaturated-blue;
+                width: 17em;
+                text-align: center;
+                padding-top: 1.2em;
+                padding-bottom: 1.5em;
+                line-height: 1.6em;
+                
+            }
+
+            .plan-container {
+                display: flex;
+                flex-direction: row;
+                gap: 1em;
+                justify-content: center;
+                align-items: center;
+                background-color: $very-pale-blue;
+                border-radius: 10px;
+                height: 4.5em;
+                width: 16em;
+
+                .plan-details {
+
+                    .annual-plan {
+                        font-size: 0.85rem;
+                        font-weight: 900;
+                    }
+    
+                    .price {
+                        font-size: 0.85rem;
+                        color:$desaturated-blue;
+                        padding-left: 0.1em;
+                        padding-top: 0.3em;
+                    }
+    
+                }  
+
+                .change-link {
+                    font-size: 0.75rem;
+                    font-weight: 900;
+                    color:$bright-blue;
+                    padding-left: 1.7em;
+
+                    &:hover {
+                        color: #766cf1;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .btn {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                background-color:$bright-blue;
+                width: 16em;
+                height: 2.8em;
+                border-radius: 10px;
+                box-shadow: #c0bbff 0px 5px 35px;
+                margin-top: 1em;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #766cf1;
+                }
+
+                .button {
+                    color: white;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    text-decoration: none;
+
+                   
+                }
+            }
+
+            .cancel {
+                padding-top: 1.1em;
+
+                a {
+                    font-size: 0.8rem;
+                    font-weight: 900;
+                    text-decoration: none;
+                    color: $desaturated-blue;
+                    
+                    &:hover {
+                        color:$dark-blue;
+                    }
+                }
+            }
+        }
+    }
+
+    .attribution {
+        font-size: 0.8rem;
+        text-align: center;
+        padding-top: 0.7em;
+        padding-left: 1.5em;
+        width: 20em;
+
+        a {
+            color: $bright-blue;
+
+            &:hover {
+                color:#766cf1;
+
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 700px) {
+
+    
+    body {
+         background-image: url(/images/pattern-background-desktop.svg);
+         background-repeat: no-repeat;
+    }
+
+    .wrapper {
+
+        .card-container {
+            width: 27em;
+            height: 40em;
+
+            .main-content {
+                
+                .heading {
+                    font-size: 1.8rem;
+                    padding-top: 1.3em;
+
+                }
+
+                .paragraph {
+                    font-size: 1rem;
+                    width: 19em;
+                }
+
+                .plan-container {
+
+                    height: 5.5em;
+                    width: 20em;
+                    gap: 1.5em;
+                    margin-bottom: 1em;
+
+                    .icon {
+                        margin-left: 0.5em;
+                    }
+                    
+                    .plan-details {
+
+                        .annual-plan {
+                            font-size: 0.95rem;
+                            padding-right: 1em;
+                        }
+        
+                        .price {
+                            font-size: 0.9rem;
+                            padding-left: -2em;
+                        }
+                    }  
+                    .change-link {
+                        padding-right: 1.5em;
+                    }
+                }
+
+                .btn {
+                    width: 20em;
+
+                }
+
+                .cancel {
+                    font-size: 0.9rem;
+                    margin-top: 0.2em;
+                }
+            }
+        }
+
+        .attribution {
+            width: 40em;
+            margin-left: -5em;
+        }
+    }
+}
