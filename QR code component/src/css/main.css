@@ -45,4 +45,16 @@ body {
   color: hsl(220deg, 15%, 55%);
   width: 17em;
   padding-top: 1em;
+}
+.wrapper .attribution {
+  font-size: 0.8rem;
+  text-align: center;
+  padding-top: 1em;
+  width: 22em;
+}
+.wrapper .attribution a {
+  color: hsl(220deg, 15%, 55%);
+}
+.wrapper .attribution a:hover {
+  color: hsl(218deg, 44%, 22%);
 }/*# sourceMappingURL=main.css.map */

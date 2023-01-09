@@ -64,6 +64,21 @@ body {
             }
         }
     }
+
+    .attribution {
+        font-size: 0.8rem;
+        text-align: center;
+        padding-top: 1em;;
+        width: 22em;
+
+        a {
+            color: $grayish-blue;
+
+            &:hover {
+                color: $dark-blue;
+            }
+        }
+    }
 }
 
 
