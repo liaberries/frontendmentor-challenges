@@ -1,1 +1,121 @@
-/*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(/images/bg-pattern-top.svg) top -40em left -40em no-repeat fixed, url(/images/bg-pattern-bottom.svg) bottom -80em right -40em no-repeat;
+  background-color: hsl(185deg, 75%, 39%);
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper .card-container {
+  background-color: white;
+  height: 23em;
+  width: 20em;
+  border-radius: 0.7em;
+}
+.wrapper .card-container .profile-details-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .card-container .profile-details-top .card-pattern-top {
+  width: 100%;
+  z-index: 2;
+  border-top-right-radius: 0.7em;
+  border-top-left-radius: 0.7em;
+}
+.wrapper .card-container .profile-details-top .profile-img {
+  width: 30%;
+  border: 5px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 5.2em;
+  z-index: 3;
+}
+.wrapper .card-container .profile-details-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5em;
+  gap: 0.7em;
+}
+.wrapper .card-container .profile-details-info .name {
+  font-size: 1.125rem;
+}
+.wrapper .card-container .profile-details-info .age {
+  color: hsl(0deg, 0%, 59%);
+  font-size: 1.1em;
+}
+.wrapper .card-container .location-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5em;
+}
+.wrapper .card-container .location-container .location {
+  font-size: 0.85em;
+  color: hsl(0deg, 0%, 59%);
+}
+.wrapper .card-container .divider {
+  height: 1px;
+  background-color: rgb(225, 225, 225);
+  border: none;
+  margin-top: 1.7em;
+}
+.wrapper .card-container .stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  margin-top: 1.3em;
+}
+.wrapper .card-container .stats .followers-number, .wrapper .card-container .stats .likes-number, .wrapper .card-container .stats .photos-number {
+  font-weight: 700;
+}
+.wrapper .card-container .stats .followers, .wrapper .card-container .stats .likes, .wrapper .card-container .stats .photos {
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
+  color: hsl(0deg, 0%, 59%);
+  margin-top: 0.5em;
+  text-align: center;
+}
+.wrapper .card-container .stats .followers-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .card-container .stats .followers-container .followers {
+  font-size: 0.6em;
+  letter-spacing: 0.1rem;
+  color: hsl(0deg, 0%, 59%);
+  margin-top: 0.5em;
+}
+.wrapper .card-container .stats .likes-container {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .card-container .stats .photos-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 700px) {
+  body {
+    background: url(/images/bg-pattern-top.svg) top -40em left -15em no-repeat, url(/images/bg-pattern-bottom.svg) bottom -80em right -15em no-repeat;
+    background-color: hsl(185deg, 75%, 39%);
+  }
+}/*# sourceMappingURL=main.css.map */

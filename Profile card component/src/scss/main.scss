@@ -1,7 +1,166 @@
 // Fonts
-
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
 // Colors
+$dark-cyan: hsl(185, 75%, 39%);
+$very-dark-saturated-blue:hsl(229, 23%, 23%);
+$dark-grayish-blue:hsl(227, 10%, 46%);
+$dark-gray:hsl(0, 0%, 59%);
 
 
 // Typography
+$body-font: 'Kumbh Sans', sans-serif;
+$body-font-size: 1.125rem;
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(/images/bg-pattern-top.svg) top -40em left -40em no-repeat fixed, url(/images/bg-pattern-bottom.svg) bottom -80em right -40em no-repeat;
+    background-color: $dark-cyan;
+    font-family: $body-font;
+}
+
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .card-container {
+        background-color: white;
+        height: 23em;
+        width: 20em;
+        border-radius: 0.7em;
+
+        .profile-details-top {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .card-pattern-top {
+                width: 100%;
+                z-index: 2;
+                border-top-right-radius: 0.7em;
+                border-top-left-radius: 0.7em;
+            }
+
+            .profile-img {
+                width: 30%;
+                border: 5px solid white;
+                border-radius: 50%;
+                position: absolute;
+                top: 5.2em;
+                z-index: 3;
+            }
+        }
+
+        .profile-details-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5em;
+            gap: 0.7em;
+
+            .name {
+                font-size: $body-font-size;
+            }
+
+            .age {
+                color: $dark-gray;
+                font-size: 1.1em;
+            }
+        }
+
+        .location-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0.5em;
+
+            .location {
+                font-size: 0.85em;
+                color: $dark-gray;
+            }
+        }
+
+        .divider {
+            height: 1px;
+            background-color: rgb(225, 225, 225);
+            border: none;
+            margin-top: 1.7em;
+        }
+
+        .stats {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 3em;
+            margin-top: 1.3em;
+
+            .followers-number, .likes-number, .photos-number {
+                font-weight: 700;
+            }
+
+            .followers, .likes, .photos {
+                font-size: 0.6rem;
+                letter-spacing: 0.1rem;
+                color: $dark-gray;
+                margin-top: 0.5em;
+                text-align: center;
+            }
+
+            .followers-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .followers {
+                    font-size: 0.6em;
+                    letter-spacing: 0.1rem;
+                    color: $dark-gray;
+                    margin-top: 0.5em;
+                }
+
+
+            }
+
+            .likes-container {
+                display: flex;
+                flex-direction: column;
+
+                .likes-number {
+    
+                }
+
+            }
+
+            .photos-container {
+                display: flex;
+                flex-direction: column;
+
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 700px) {
+
+
+    body {
+        background: url(/images/bg-pattern-top.svg) top -40em left -15em no-repeat, url(/images/bg-pattern-bottom.svg) bottom -80em right -15em no-repeat;
+        background-color: $dark-cyan;
+    }
+
+    
+}
