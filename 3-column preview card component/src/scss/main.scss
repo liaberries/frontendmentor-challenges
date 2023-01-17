@@ -1,0 +1,204 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+// Colors
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan:hsl(179, 100%, 13%);
+$transparent-white: hsla(0, 0%, 100%, 0.75); //paragraph
+$very-light-gray: hsl(0, 0%, 95%); //background, headings, buttons
+
+
+// Typography
+$body-font-size: 0.9375;
+$font-lexend: 'Lexend Deca', sans-serif;
+$font-weight-lexend: 400;
+$font-big-shoulders: 'Big Shoulders Display', sans-serif; 
+$font-weight-big-shoulders: 700;
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $very-light-gray;
+    // min-height: 100vh;
+    // display: grid;
+    // place-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 20em;
+
+    h1 {
+        font-family: $font-big-shoulders;
+        font-size: $body-font-size;
+        font-weight: $font-weight-big-shoulders;
+        text-transform: uppercase;
+        color: $very-light-gray;
+        padding-top: 1em;
+        padding-bottom: 0.7em;
+
+    }
+
+    p {
+        font-family: $font-lexend;
+        font-size: 0.8em;
+        line-height: 1.8em;
+        color: $transparent-white;
+        width: 16em;
+        padding-bottom: 1.5em;
+        padding-right: 1em;
+    }
+
+    img {
+        padding-top: 0.5em;
+    }
+
+    a {
+        background-color: $very-light-gray;
+        font-family: $font-lexend;
+        font-size: 0.8em;
+        width: 9em;
+        height: 3em;
+        border-radius: 5em;
+        border: 1px solid $very-light-gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        margin-left: 1em;
+        padding-left: 0.3em;
+        padding-right: 0.3em;
+        margin: 0;
+        transition: border-color 0.5s, background-color 0.5s, color 0.5s;
+
+        &:hover {
+            border: 1px solid $very-light-gray;
+            background-color: unset;
+            color: $very-light-gray;
+        }
+        
+    }
+    
+   
+
+    .column-one {
+        background-color: $bright-orange;
+        border-top-left-radius: 0.5em;
+        border-top-right-radius: 0.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        
+    }
+
+    .column-link-one {
+        color: $bright-orange;
+    }
+
+    .column-two {
+        background-color: $dark-cyan;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .column-link-two {
+        color: $dark-cyan;
+    }
+
+    .column-three {
+        background-color: $very-dark-cyan;
+        border-bottom-left-radius: 0.5em;
+        border-bottom-right-radius: 0.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .column-link-three {
+        color: $very-dark-cyan;
+    }
+
+    .column-one, .column-two, .column-three {
+        padding: 2em 2em 2.7em 3em;
+        
+    }
+
+}
+
+.attribution {
+    padding-top: 1em;
+    font-family: $font-lexend;
+    font-size: 0.8em;
+
+    a {
+        color: $dark-cyan;
+
+        &:hover {
+            color: $bright-orange;
+        }
+    }
+
+
+}
+
+@media only screen and (min-width: 700px) {
+
+    body {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+  
+    .container {
+        display: flex;
+        flex-direction: row;
+
+        .column-one {
+            border-top-left-radius: 0.5em;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0.5em;
+        }
+
+        .column-three {
+            border-top-right-radius: 0.5em;
+            border-bottom-left-radius: 0;
+        }
+
+        a {
+            margin-top: 4em;
+        }
+
+        p {
+            width: 14em;
+        }
+    }
+
+    .attribution {
+        padding-top:-1em;
+        margin: 0;
+    }
+}
+
+
+
+
+
+
