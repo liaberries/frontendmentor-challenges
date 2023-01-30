@@ -1,0 +1,246 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+
+
+// Colors
+$very-dark-magenta: hsl(300, 43%, 22%);
+$dark-grayish-magenta: hsl(303, 10%, 53%);
+$light-grayish-magenta: hsl(300, 24%, 96%);
+$soft-pink: hsl(333, 80%, 67%);
+$white:hsl(0, 0%, 100%);
+
+
+
+// Typography
+$body-font: 'League Spartan', sans-serif;
+$body-font-size: 0.9375rem;
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(/images/bg-pattern-top-desktop.svg) top -0.5em left -0.9em no-repeat, url(/images/bg-pattern-bottom-desktop.svg) bottom -5em left 20em no-repeat;
+    //background-color: $white;
+    font-family: $body-font;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "hero ratings ."
+  "reviews reviews reviews";
+  grid-gap: 4em;
+  place-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.hero-section {
+    grid-area: hero;
+    padding-top: 10em;
+    padding-left: 8.2em;
+    padding-bottom: 2em;
+    
+    .main-heading {
+        color: $very-dark-magenta;
+        font-size: 3em;
+        text-align: left;
+        width: 7em;
+        padding-bottom: 0.5em;
+    }
+
+    .main-text {
+        font-size: 1.2em;
+        color: $dark-grayish-magenta;
+        width: 24em;
+        line-height: 1.5em;
+    }
+}
+
+.ratings {
+    grid-area: ratings;
+    padding-top: 11em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    .stars-container{
+        display: flex;
+        gap: 0.5em;
+        align-items: flex-start;
+    }
+
+    
+    .reviews-container, .report-guru-container, .best-tech-container {
+        display: flex;
+        flex-direction: row;
+        gap: 2.5em;
+        background-color: $light-grayish-magenta;
+        max-width: 25em;
+        padding: 1.2em;
+        border-radius: 0.4em;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .report-guru-container {
+        margin-left: 3em;
+    }
+
+    .best-tech-container {
+        margin-left: 6em;
+    }
+
+    p {
+        color: $very-dark-magenta;
+        font-weight: 700;
+    }
+}
+
+
+.testimonials {
+    grid-area: reviews;
+    display: grid;
+    grid-template-columns: 0.25fr 0.25fr 0.25fr;
+    grid-template-rows: 2fr;
+    place-content: center;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 1.5em;
+    padding-bottom: 5em;
+    margin-left: -3em;
+
+    .card-one {
+        transform: translate(-5px, -15px);
+    }
+
+    .card-three {
+        transform: translate(5px, 20px);
+    }
+
+
+
+    .card-one, .card-two, .card-three {
+        background-color: $very-dark-magenta;
+        border-radius: 0.5em;
+    }
+
+    .user-details {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        padding: 2.5em 0 1em 2em;
+        align-items: center;
+
+        img {
+            border-radius: 3em;
+            width: 12%;
+        }
+
+        .name {
+            color: $white;
+        }
+
+        .title {
+            color:$soft-pink;
+        }
+    }
+
+    .testimonial-text {
+        color:$light-grayish-magenta;
+        padding: 1em;
+        line-height: 1.5em;
+        align-self: center;
+        justify-self: center;
+        padding: 1em 1em 2em 2em;
+        max-width: 18em;
+    }
+}
+
+// For Smartphones
+@media screen and (max-width: 768px) {
+    body {
+        background: url(/images/bg-pattern-top-desktop.svg) top 0em left 6em no-repeat, url(/images/bg-pattern-top-mobile.svg) bottom -0.5em left 5em no-repeat;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr;
+        grid-template-areas:
+        "hero"
+        "ratings"
+        "reviews";
+        margin: 0;
+        place-content: center;
+        justify-items: center;
+        text-align: center;
+        grid-gap: 3em;
+    }
+
+    .hero-section {
+        padding: 0;
+        margin-top: 65em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        grid-area: hero;
+
+        .main-heading {
+            text-align: center;
+        }
+       
+    }
+
+    .ratings {
+        padding: 0;
+        margin: 0;
+        grid-area: ratings;
+
+        .reviews-container, .report-guru-container, .best-tech-container {
+            margin: 0;
+            min-width: 25em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .testimonials {
+        display: grid;
+        grid-template-areas: 
+        "card-one"
+        "card-two"
+        "card-three";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        place-content: center;
+        justify-content: center;
+        align-items: center;
+        grid-area: reviews;
+       
+        .card-one {
+            grid-area: card-one;
+            place-self: center;
+            transform: translate(30px, 10px);
+        }
+
+
+        .card-two {
+            grid-area: card-two;
+            transform: translate(30px, 10px);
+        }   
+        .card-three {
+            grid-area: card-three;
+            transform: translate(30px, 10px);
+        }
+    }
+
+}
