@@ -1,1 +1,166 @@
-/*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(/images/bg-mobile.svg) top -1em left 0 no-repeat;
+  background-size: 100%;
+  background-color: hsl(257deg, 40%, 49%);
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.logo {
+  display: flex;
+  padding: 2em;
+}
+.logo .huddle-logo {
+  width: 30%;
+  max-width: 200px;
+  padding-left: 0.5em;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3em;
+  text-align: center;
+  color: white;
+}
+.hero .hero-image {
+  max-width: 80%;
+  padding-bottom: 5em;
+}
+.hero .hero-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero .hero-text-container .heading {
+  font-family: "Poppins", sans-serif;
+  width: 13em;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding-bottom: 0.5em;
+}
+.hero .hero-text-container .body-text {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5em;
+  width: 19em;
+  padding-bottom: 1.5em;
+}
+.hero .hero-text-container .button {
+  background-color: white;
+  border-radius: 10em;
+  padding: 0.7em;
+  width: 13em;
+  color: hsl(257deg, 40%, 49%);
+  font-family: "Poppins", sans-serif;
+  box-shadow: 5px 6px 8px hsl(257deg, 49%, 41%);
+  text-align: center;
+}
+.hero .hero-text-container .button:hover {
+  background-color: hsl(300deg, 69%, 71%);
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 4em;
+  padding-bottom: 2em;
+  color: white;
+  gap: 1em;
+}
+.social-icons .fa-facebook-f, .social-icons .fa-twitter, .social-icons .fa-instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 0.5em;
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+.social-icons .fa-facebook-f:hover, .social-icons .fa-twitter:hover, .social-icons .fa-instagram:hover {
+  color: hsl(300deg, 69%, 71%);
+  border: 1px solid hsl(300deg, 69%, 71%);
+}
+
+@media screen and (min-width: 600px) {
+  .hero .hero-text-container .heading {
+    width: 25em;
+  }
+  .hero .hero-text-container .body-text {
+    width: 30em;
+  }
+  .hero .hero-text-container .button {
+    width: 10em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    background: url(/images/bg-desktop.svg) top -2em left -2em no-repeat;
+    background-color: hsl(257deg, 40%, 49%);
+  }
+  .container {
+    width: 100vw;
+    height: 100vh;
+  }
+  .logo {
+    margin-left: 2.5em;
+  }
+  .hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .hero .hero-image {
+    max-width: 50%;
+    margin-left: 5em;
+  }
+  .hero .hero-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    padding-left: 3em;
+    padding-top: 3em;
+  }
+  .hero .hero-text-container .heading {
+    font-size: 2rem;
+    width: 13em;
+    margin-left: -1.5em;
+  }
+  .hero .hero-text-container .body-text {
+    font-size: 1em;
+    width: 29em;
+  }
+  .hero .hero-text-container .button {
+    width: 10em;
+    margin-left: -17.5em;
+  }
+  .social-icons {
+    justify-content: flex-end;
+    padding-right: 5em;
+    margin-top: -7em;
+  }
+}/*# sourceMappingURL=main.css.map */
