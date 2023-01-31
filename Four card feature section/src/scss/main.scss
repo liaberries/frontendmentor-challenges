@@ -1,0 +1,209 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+
+// Colors
+$red: hsl(0, 78%, 62%);
+$cyan:  hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+$very-dark-blue: hsl(234, 12%, 34%);
+$grayish-blue: hsl(229, 6%, 66%);
+$very-light-gray: hsl(0, 0%, 98%);
+
+
+
+// Typography
+$body-font-size: 0.9375rem;
+$body-font: 'Poppins', sans-serif;
+
+
+// For Mobile
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $very-light-gray;
+    font-family: $body-font;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em;
+    font-size: 1.1875rem;
+
+
+    .heading {
+
+        color:$very-dark-blue;
+        font-weight: 200;
+        padding-bottom: 0.5em;
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+
+    .hero-text {
+        text-align: center;
+        width: 20em;
+        color:$grayish-blue;
+        padding-bottom: 4em;
+
+    }
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding-bottom: 2em;
+
+    .card-one, .card-two, .card-three, .card-four {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: white;
+        border-radius: 0.5em; 
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        padding: 2em;
+    }
+
+    .card-one {
+        border-top: 4px solid $cyan;
+        grid-area: card-one;
+    }
+
+    .card-two {
+        border-top: 4px solid $red;
+        grid-area: card-two;
+    }
+    
+    .card-three {
+        border-top: 4px solid $orange;
+        grid-area: card-three;
+    }
+
+    .card-four {
+        border-top: 4px solid $blue;
+        grid-area: card-four;
+    }
+
+    .title {
+        color: $very-dark-blue;
+    }
+
+    .desc {
+        font-size: 	0.875rem;
+        color:$grayish-blue;
+        width: 20.5em;
+        padding-top: 1em;
+        padding-bottom: 2em;
+        padding-right: 1em;
+    }
+
+    img {
+        align-self: flex-end;
+    }
+}
+
+
+// For Tablets
+@media screen and (min-width: 600px) {
+
+    .hero {
+        
+        .hero-text {
+            font-size: 0.9375rem;
+            width: 30em;
+        }
+    }
+
+
+    .main-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "first second"
+        "third fourth";
+
+        .card-one {
+            grid-area: first;
+        }
+
+        .card-two {
+            grid-area: second;
+        }
+
+        .card-three {
+            grid-area: third;
+        }
+
+        .card-four {
+            grid-area: fourth;
+        }
+
+
+    }
+}
+
+// For Desktop
+@media screen and (min-width: 1200px){
+
+    .hero {
+
+        .hero-text {
+            width: 35em;
+            font-size: 0.9375rem;
+        }
+    }
+
+
+    .main-content {
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "first middle1 last"
+        "first middle2 last"; 
+
+        .card-one {
+            grid-area: first;
+            align-self: center;
+        }
+
+        .card-two {
+            grid-area: middle1;
+        }
+        
+        .card-three {
+            grid-area: middle2;
+        }
+
+        .card-four {
+            grid-area: last;
+            align-self: center;
+        }
+    }
+}
+
