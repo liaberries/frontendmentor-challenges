@@ -14,4 +14,3 @@ allRatings.forEach((rate) => {
         rating.innerHTML = rate.innerHTML
     })
 })
-
