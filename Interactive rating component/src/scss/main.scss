@@ -1,0 +1,219 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+
+// Colors
+$orange: hsl(25, 97%, 53%);
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(217, 12%, 63%);    
+$medium-grey: hsl(216, 12%, 54%); 	//#7c8798
+$dark-blue: hsl(213, 19%, 18%); //	#252d37
+$very-dark-blue: hsl(216, 12%, 8%); 
+
+// Typography
+$body-font: 'Overpass', sans-serif;
+$body-font-size: 0.9375rem;
+$regular-fw: 400;
+$bold-fw: 700;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: $very-dark-blue;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $body-font;
+    font-size: $body-font-size;
+}
+
+button {
+    border: none;
+    font-family: $body-font;
+    font-weight: $bold-fw;
+    letter-spacing: 0.2em;
+    background-color: $orange;
+    color:$white;
+    padding: 1em;
+    border-radius: 2em;
+    width: 23em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    align-self: center;
+
+    transition: background-color 0.5s ease, color 0.5s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: white;
+        color: $orange;
+    }
+}
+
+a {
+    text-decoration: none;
+    color:$light-gray;
+}
+
+
+// Rating container
+.main-container {
+
+    display: flex;
+    flex-direction: column;
+    background:linear-gradient(hsl(213, 27%, 16%), hsl(218 ,24%, 13%));
+    border-radius: 1.7em;
+    justify-content: center;
+    align-content: center;
+    padding: 1.5em;
+    gap: 1em;
+    margin-bottom:1em;
+   
+
+
+    .star-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        background: lighten($very-dark-blue, 11.5);
+        border-radius: 50%;
+
+        img {
+            height: 35%;
+
+        }
+    }
+
+    .heading {
+        color: $white;
+        font-size: 1.5em;
+        align-self: flex-start;
+        font-weight: 400;
+        padding-top: 0.5em;
+    }
+
+    .rating-text {
+        width: 20em;
+        color: $light-gray;
+        padding-bottom: 1em;
+        line-height: 1.5em;
+        font-size: 0.8rem;
+        width: 22em;
+    }
+
+
+    .numbers-container {
+        display: flex;
+        flex-direction: row;
+        gap: 1.4em;
+        align-self: flex-start;
+        padding-bottom: 1em;
+        justify-content: center;
+        align-items: center;
+
+    
+
+        #btn {
+            background: lighten($very-dark-blue, 11.5);
+            padding: 1em;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: $regular-fw;
+            color: $light-gray;
+            transition: background-color 0.5s ease, color 0.5s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $medium-grey;
+                color: $white;
+            }
+        }
+
+        #btn:focus {
+            background-color: $orange;
+            color:white;
+            font-weight: $bold-fw;
+        }
+    }
+}
+
+// Thank you container
+.thank-you-container {
+    display: flex;
+    flex-direction: column;
+    background:linear-gradient(hsl(213, 27%, 16%), hsl(218 ,24%, 13%));
+    border-radius: 1.7em;
+    justify-content: center;
+    align-items: center;
+    padding: 1.7em;
+    gap: 1em;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+.thanks-icon {
+    width: 50%;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+.selected {
+    background:lighten($very-dark-blue, 11.5);
+    padding: 0.4em 0.8em 0.4em 0.8em;
+    border-radius: 3em;
+    color: $orange;
+}
+
+.thanks-message {
+    color: $white;
+    font-size: 1.5em;
+    align-self: center;
+    font-weight: 400;
+    padding-top: 0.5em;
+}
+
+
+.appreciation {
+    width: 22.5em;
+    text-align: center;
+    color: $light-gray;
+    line-height: 1.5em;
+    font-size: 0.8rem;
+    padding-bottom: 1em;
+}
+
+
+.attribution {
+    color: white;
+    padding-top: 0.5em;
+}
+
+
+
+
+
+
+
+
+
