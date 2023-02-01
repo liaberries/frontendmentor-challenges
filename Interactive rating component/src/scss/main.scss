@@ -126,7 +126,7 @@ a {
 
     
 
-        #btn {
+        .rating-btn {
             background: lighten($very-dark-blue, 11.5);
             padding: 1em;
             width: 45px;
@@ -146,7 +146,7 @@ a {
             }
         }
 
-        #btn:focus {
+        .rating-btn:focus {
             background-color: $orange;
             color:white;
             font-weight: $bold-fw;
