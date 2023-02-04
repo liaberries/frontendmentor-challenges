@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(210deg, 46%, 95%);
+  padding: 2em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid red;
+}
+
+.image-container {
+  overflow: hidden;
+}
+.image-container .drawers-image {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=main.css.map */
