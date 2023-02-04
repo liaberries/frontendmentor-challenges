@@ -6,13 +6,12 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  background-color: hsl(210deg, 46%, 95%);
+  font-family: "Manrope", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: hsl(210deg, 46%, 95%);
   padding: 2em;
 }
 
@@ -20,14 +19,81 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 3px solid red;
+  align-content: center;
+  max-width: 335px;
+  background-color: white;
+  box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
+  border-top-right-radius: 0.7em;
+  border-top-left-radius: 0.7em;
+  border-bottom-right-radius: 0.7em;
+  border-bottom-left-radius: 0.7em;
+  overflow: hidden;
 }
 
 .image-container {
-  overflow: hidden;
-}
-.image-container .drawers-image {
+  background: url(/images/drawers.jpg);
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  background-size: cover;
+  height: 14.2em;
+}
+
+.content {
+  background-color: white;
+  padding: 2em 2em 1em 2em;
+}
+.content .heading-text {
+  font-size: 1.07rem;
+  color: hsl(217deg, 19%, 35%);
+  padding-bottom: 0.6em;
+  line-height: 1.5em;
+}
+.content .paragraph {
+  font-size: 0.85rem;
+  color: hsl(214deg, 17%, 51%);
+  line-height: 1.6em;
+  text-align: left;
+  width: 19.7em;
+  padding-bottom: 1em;
+}
+
+.article-footer {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  padding-left: 2.2em;
+  padding-bottom: 1.3em;
+}
+.article-footer .author-image {
+  width: 13%;
+  border-radius: 50%;
+}
+.article-footer .author-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+.article-footer .author-details .name {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: hsl(217deg, 19%, 35%);
+}
+.article-footer .author-details .date {
+  font-size: 0.8rem;
+  color: hsl(212deg, 23%, 69%);
+}
+.article-footer .share-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2em;
+  height: 2em;
+  background-color: hsl(210deg, 46%, 95%);
+  margin-left: 2.8em;
+  border-radius: 50%;
+  padding: 0.7em;
+}
+
+.share-popup {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
